@@ -7,12 +7,13 @@ import { LoginComponent } from './app/login/login.component';
 import { RegisterComponent } from './app/register/register.component';
 
 
+
 bootstrapApplication(
-  HomeComponent,
+  //HomeComponent,
   //OrderComponent,
   //OrderCofirmComponent,
   //LoginComponent,
-  //RegisterComponent,
+  RegisterComponent,
   appConfig)
   .catch((err) => console.error(err));
 

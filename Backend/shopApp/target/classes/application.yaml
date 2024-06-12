@@ -23,3 +23,7 @@ server:
   port: 8088
 api:
   prefix: api/v1
+jwt:
+  expiration : 2592000
+#    30 ngày 30*24*60:60
+  secretKey: 4nyx7QMPld7tFW8hYCL8gK+AY2y0RIWFIKyhtIgtDi4=

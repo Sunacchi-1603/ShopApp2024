@@ -1,10 +1,7 @@
 package com.project.shopApp.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -12,7 +9,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "products_images")
+@Builder
 public class ProductImage {
+    public static final int MAXIMUM_IMAGE_PER_PRODUCT = 5;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

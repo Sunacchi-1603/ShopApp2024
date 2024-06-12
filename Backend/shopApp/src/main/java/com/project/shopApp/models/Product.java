@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "products")
+@Builder
 public class Product extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +22,6 @@ public class Product extends BaseEntity{
     @Column(length = 300)
     private String thumbnail;
     private String description;
-    @Column(name = "category_id")
-    private Long categoryId;
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;

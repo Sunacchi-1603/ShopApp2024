@@ -1,6 +1,11 @@
 package com.project.shopApp.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.project.shopApp.models.Order;
+import com.project.shopApp.models.Product;
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Min;
 import lombok.*;
 
@@ -17,7 +22,7 @@ public class OrderDetailDTO {
     @Min(value = 1,message = "productId > 0")
     private Long productId;
     @Min(value = 0,message = "prive >= 0")
-    private Long price;
+    private Float price;
     @JsonProperty("number_of_products")
     private int numberOfProduct;
     @JsonProperty("total_money")
