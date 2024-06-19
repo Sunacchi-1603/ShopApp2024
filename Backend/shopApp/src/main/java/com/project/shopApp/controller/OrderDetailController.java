@@ -19,6 +19,7 @@ import java.util.List;
 @RequestMapping("${api.prefix}/orderDetail")
 public class OrderDetailController {
     private final OrderDetailService orderDetailService;
+    private final com.project.shopApp.components.LocalizationUtils localizationUtils;
     @PostMapping("")
     public ResponseEntity<?> createOrderDetail(
             @Valid @RequestBody OrderDetailDTO orderDetailDTO,

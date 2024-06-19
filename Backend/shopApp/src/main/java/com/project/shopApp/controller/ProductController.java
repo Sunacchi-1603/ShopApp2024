@@ -38,6 +38,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ProductController {
     public final IProductService productService;
+    private final com.project.shopApp.components.LocalizationUtils localizationUtils;
 
     @GetMapping("")
     public ResponseEntity<?> getAllProduct(

@@ -1,6 +1,6 @@
 package com.project.shopApp.services;
 
-import com.project.shopApp.component.JwtTokenUtil;
+import com.project.shopApp.component.JwtTokenUtils;
 import com.project.shopApp.dtos.UserDTO;
 import com.project.shopApp.exeptions.DataNotFoundException;
 import com.project.shopApp.exeptions.InvalidParamException;
@@ -25,7 +25,7 @@ public class UserService implements IUserService{
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtTokenUtil jwtTokenUtil;
+    private final JwtTokenUtils jwtTokenUtils;
     private final AuthenticationManager authenticationManager;
     @Override
     public User createUser(UserDTO userDTO) throws Exception {
@@ -79,6 +79,6 @@ public class UserService implements IUserService{
         );
         // authenticate with java spring secirity
         authenticationManager.authenticate(authenticationToken);
-        return jwtTokenUtil.generrateToken(existingUser);
+        return jwtTokenUtils.generrateToken(existingUser);
     }
 }

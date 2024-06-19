@@ -18,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderController {
     private final IOrderRervice orderService;
+    private final com.project.shopApp.components.LocalizationUtils localizationUtils;
     @PostMapping
     public ResponseEntity<?> insertOrder(
             @Valid @RequestBody OrderDTO orderDTO,
